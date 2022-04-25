@@ -1,6 +1,6 @@
 let question = {
-    title: 'gato',
-    alternatives: ['dog', 'cat', 'bird', 'fish'],
+    title: 'pelota',
+    alternatives: ['patata', 'pelota', 'pelusa', 'pepa'],
     correctAnswer: 1
   };
   
@@ -8,23 +8,51 @@ let question = {
   let questions = [
     {
       title: 'gato',
-      alternatives: ['dog', 'cat', 'bird', 'fish'],
+      img: './src/pelota.png',
+      alternatives: ['patata', 'pelota', 'pelusa', 'pepa'],
       correctAnswer: 1
     },
     {
-      title: 'ave',
-      alternatives: ['mouse', 'hamster', 'lizard', 'bird'],
+      title: 'sopa',
+      img: './src/sopa.png',
+      alternatives: ['poso', 'sapo', 'posa', 'sopa'],
       correctAnswer: 3
     },
     {
-      title: 'rata',
-      alternatives: ['cat', 'fish', 'rat', 'shark'],
+      title: 'tomate',
+      img: './src/tomate.png',
+      alternatives: ['tomasa', 'tema', 'tomate', 'mate'],
       correctAnswer: 2
     },
     {
-      title: 'mosca',
-      alternatives: ['fly', 'puma', 'fish', 'dog'],
+      title: 'silla',
+      img: './src/silla.png',
+      alternatives: ['silla', 'sima', 'misa', 'llama'],
       correctAnswer: 0
+    },
+    {
+      title: 'mesa',
+      img: './src/mesa.png',
+      alternatives: ['misa', 'sima', 'suma', 'mesa'],
+      correctAnswer: 3
+    },
+    {
+      title: 'pila',
+      img: './src/pila.png',
+      alternatives: ['palo', 'lupa', 'pila', 'papa'],
+      correctAnswer: 2
+    },
+    {
+      title: 'lupa',
+      img: './src/lupa.png',
+      alternatives: ['papa', 'lupa', 'pala', 'papa'],
+      correctAnswer: 1
+    },
+    {
+      title: 'ola',
+      img: './src/ola.png',
+      alternatives: ['misa', 'suma', 'pila', 'ola'],
+      correctAnswer: 3
     }
   ];
   
@@ -58,6 +86,7 @@ let question = {
       // show question title
       let titleDiv = document.getElementById('title');
       titleDiv.textContent = q.title; 
+      titleDiv.innerHTML = `<img src="${q.img}" alt="">`; 
     
       // show alternatives
       let alts = document.querySelectorAll('.alternative');
